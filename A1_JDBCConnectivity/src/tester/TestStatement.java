@@ -8,7 +8,8 @@ public class TestStatement
 	public static void main(String[] args) 
 	{
 		try(Connection conn=openConnection();
-				//create empty Statement object , to hold query )
+				
+				//create empty Statement object , to hold query 
 				Statement st=conn.createStatement();
 				
 				//execute the select query : public ResultSet executeQuery(String sql) throws SQLExc.

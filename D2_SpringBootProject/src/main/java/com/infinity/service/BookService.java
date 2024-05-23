@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.infinity.model.Book;
 
+@Service
 public class BookService 
 {
 	private static  List<Book> list=new ArrayList<>();

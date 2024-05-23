@@ -12,9 +12,9 @@
 	</parent>
 	
 	<groupId>com.infinity</groupId>
-	<artifactId>SpringBootDurgeshPractice</artifactId>
+	<artifactId>D2_SpringBootProject</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringBootProjectWithFakeServiceCreateOn-4-19-2024</name>
+	<name>D2_SpringBootProject</name>
 	<description>This is only for Learninig purpose to create a API when asked in interviews</description>
 	
 	<properties>

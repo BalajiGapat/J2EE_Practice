@@ -20,7 +20,7 @@ public class EmployeeDaoImpl implements IEmployeeDao
 		// get fix db connection from DBUtils
 		cn = openConnection();
 		
-		pst1 = cn.prepareStatement("select empid,name,salary,join_date from my_emp where deptid=? and join_date between ? and ?");
+		pst1 = cn.prepareStatement("select empid, name, salary, join_date from my_emp where deptid=? and join_date between ? and ?");
 		
 		pst2=cn.prepareStatement("insert into my_emp values(default,?,?,?,?,?)");
 		

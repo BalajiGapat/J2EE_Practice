@@ -1,7 +1,8 @@
 package com.infinity.controller;
 
-import java.util.List;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +15,10 @@ import com.infinity.service.BookService;
 @RequestMapping("/api") //URL => http://localhost:8080/api
 public class BookController  
 {
-	private BookService bookService=new BookService();
+	// private BookService bookService=new BookService();
+	@Autowired
+	private BookService bookService;
+	
 	
 	//@RequestMapping(value="/home", method=RequestMethod.GET)
 	@GetMapping("/home") //URL => http://localhost:8080/api/home
@@ -25,12 +29,11 @@ public class BookController
 		return "This is Home page!!! & Book: \n"+bk;
 	}
 	
-	
 	@GetMapping("/books") //URL =>  http://localhost:8080/api/books
-	public List<Book> getAllBook()
+	public ResponseEntity<?> getAllBook()
 	{
 		bookService.getAllBooks().forEach(b->System.out.println(b));
-		return bookService.getAllBooks();
-	}
-	
+		return new ResponseEntity<>(bookService.getAllBooks(), HttpStatus.OK);
+		// return bookService.getAllBooks();
+	}	
 }
