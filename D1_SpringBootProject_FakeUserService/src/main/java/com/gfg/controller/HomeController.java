@@ -23,24 +23,32 @@ public class HomeController
 	@GetMapping("/home-page") // http://localhost:8080/api/home-page
 	public ResponseEntity<?> homePage()
 	{
-		return ResponseEntity.ok().body("This is Home Page");
+		System.out.println("This is Home Page => start");
+		String str="This is Home Page";
+		str=str.toUpperCase();
+		str=str.toLowerCase();
+		
+		return ResponseEntity.ok().body(str);
 	}
 	
 	@GetMapping("/all-users") // http://localhost:8080/api/all-users
 	public ResponseEntity<?> getAllUsers()
 	{
+		System.out.println("in getAllUsers() => start");
 		return fakeUserService.getAllUsers();
 	}
 	
 	@GetMapping("/user/username/{username}") // http://localhost:8080/api/user/username/Balaji
 	public ResponseEntity<?> getUserByUserName(@PathVariable("username") String userName)
 	{
+		System.out.println("in getUserByUserName() => start");
 		return fakeUserService.getUserByUserName(userName);
 	}
 	
 	@PostMapping("/add-user") // http://localhost:8080/api/add-user
 	public ResponseEntity<?> addUser(@RequestBody User user)
 	{
+		System.out.println("in addUser() => start");
 		return fakeUserService.addUser(user);
 	}
 		
