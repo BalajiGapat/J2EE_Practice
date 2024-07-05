@@ -29,7 +29,7 @@ public class TestEmpCRUD
 					switch (sc.nextInt()) 
 					{
 					case 1: // get emp details
-						System.out.println("Enter deptId, begin_date and end_date(yr-mon-day)");
+						System.out.println("Enter dept_id, begin_date and end_date(yr-mon-day)");
 						List<Employee> empList = dao.getSelectedEmpDetails(sc.next(), Date.valueOf(sc.next()), Date.valueOf(sc.next()));
 						empList.forEach(System.out::println);
 						break;

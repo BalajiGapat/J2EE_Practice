@@ -15,7 +15,7 @@ public class AccountDaoImpl implements IAccountDao
 		cn=openConnection();
 		
 		//cst1 : to represent invocation of a stored proc
-		cst1=cn.prepareCall("{call transfer_funds(?,?,?,?,?)}");
+		cst1=cn.prepareCall("{call transfer_funds(?, ?, ?, ?, ?)}"); // transfer_funds is a stored procedure present in database
 		
 		//register OUT params
 		//API of CST public void registerOutParameter(int paramPos,int jdbcTYpe) throws SQLException

@@ -8,7 +8,7 @@ public class TestPreparedStatement
 {
 	public static void main(String[] args) 
 	{
-		String sql = "select * from my_emp where deptid=? and join_date >= ? order by salary";
+		String sql = "select * from my_emp where dept_id=? and join_date >= ? order by salary";
 		try (Scanner sc = new Scanner(System.in);
 				// establish db connection
 				Connection cn = openConnection();

@@ -20,15 +20,15 @@ public class EmployeeDaoImpl implements IEmployeeDao
 		// get fix db connection from DBUtils
 		cn = openConnection();
 		
-		pst1 = cn.prepareStatement("select empid, name, salary, join_date from my_emp where deptid=? and join_date between ? and ?");
+		pst1 = cn.prepareStatement("select id, name, salary, join_date from my_emp where dept_id=? and join_date between ? and ?");
 		
-		pst2=cn.prepareStatement("insert into my_emp values(default,?,?,?,?,?)");
+		pst2=cn.prepareStatement("insert into my_emp values(default, ?, ?, ?, ?, ?)");
 		
-		pst3=cn.prepareStatement("update my_emp set salary=salary+?,deptid=? where empid=?");
+		pst3=cn.prepareStatement("update my_emp set salary=salary+?, deptid=? where empid=?");
 		
-		pst4=cn.prepareStatement("delete from my_emp where empid=?");
+		pst4=cn.prepareStatement("delete from my_emp where id=?");
 		
-		pst5=cn.prepareStatement("select deptid,round(avg(salary), 3) from my_emp group by deptid");
+		pst5=cn.prepareStatement("select dept_id, round(avg(salary), 3) from my_emp group by dept_id");
 		
 		System.out.println("emp dao created...");
 	}

@@ -10,7 +10,7 @@ public class TestStoredProc
 		{
 			// create dao instance
 			AccountDaoImpl dao = new AccountDaoImpl();
-			System.out.println("Enter src dest a/c nos n amount");
+			System.out.println("Enter scourse and destination a/c No and amount");
 			System.out.println(dao.transferFunds(sc.nextInt(), sc.nextInt(), sc.nextDouble()));
 			dao.cleanUp();
 		} 
