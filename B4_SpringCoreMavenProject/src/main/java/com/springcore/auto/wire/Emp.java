@@ -16,8 +16,6 @@ public class Emp
 		System.out.println("In Emp.class constructor...");
 	}
 
-	
-
 	public Address getAddress() 
 	{
 		return address;
@@ -25,11 +23,10 @@ public class Emp
 
 	public void setAddress(Address address) 
 	{
-		System.out.println("Setting value");
+		System.out.println("Setting value through setter i.e setAddress()...");
 		this.address = address;
 	}
 
-	
 	@Override
 	public String toString() 
 	{

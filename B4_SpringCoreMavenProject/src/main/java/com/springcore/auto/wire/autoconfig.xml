@@ -8,16 +8,16 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean class="com.springcore.auto.wire.Address" name="address1">
+	<bean class="com.springcore.auto.wire.Address" id="add1" name="address1">
 		<property name="street" value="Temp Street" />
 		<property name="city" value="Delhi" />
 	</bean>
 	
-	<bean class="com.springcore.auto.wire.Address" name="address">
+	<bean class="com.springcore.auto.wire.Address" id="add2" name="address">
 		<property name="street" value="Second Street" />
 		<property name="city" value="Kanpur" />
 	</bean>
-	
-	<bean class="com.springcore.auto.wire.Emp" name="emp1"  autowire="constructor" />
+
+	<bean class="com.springcore.auto.wire.Emp" id="e1" name="emp1"  autowire="constructor" />  <!-- autoire="constructor" -->
 
 </beans>

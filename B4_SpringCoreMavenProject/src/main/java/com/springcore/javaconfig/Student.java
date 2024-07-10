@@ -1,8 +1,6 @@
 package com.springcore.javaconfig;
 
-import org.springframework.stereotype.Component; 
-
-
+// @Component
 public class Student 
 {	
 	private Samosa samosa;
@@ -28,4 +26,11 @@ public class Student
 		this.samosa.display();
 		System.out.println("student is reading book");
 	}
+
+	@Override
+	public String toString() {
+		return "Student [samosa=" + samosa + "]";
+	}
+	
+	
 }

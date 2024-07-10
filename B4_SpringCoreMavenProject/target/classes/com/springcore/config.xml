@@ -10,10 +10,9 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- this is our beans -->
-	<bean id="FirstStudent" class="com.springcore.Student" name="student1"  p:studentId="24234" p:studentName="Ram Singh" p:studentAddress="Delhi"    />
+	<bean id="FirstStudent" class="com.springcore.Student" name="student1"  p:studentId="24234" p:studentName="Ram Singh" p:studentAddress="Delhi" />
 
 	<!-- second bean  -->
 	<bean id="SecondStudent" class="com.springcore.Student" name="student2"  p:studentId="1341" p:studentName="Shyam Singh" p:studentAddress="Lucknow" />
 
-	
 </beans>

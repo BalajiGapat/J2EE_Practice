@@ -7,7 +7,7 @@ public class Certi
 	public Certi(String name) 
 	{
 		super();
-		this.name = name;
+		this.name = name+" => Balaji";
 	}
 
 	@Override

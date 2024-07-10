@@ -32,6 +32,4 @@ public class Address
 		return "Address [street=" + street + ", city=" + city + "]";
 	}
 	
-	
-	
 }

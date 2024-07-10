@@ -10,8 +10,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
    <!-- Bean configration -->
-	<bean class="com.springcore.ci.Certi" name="cer"
-		c:name="Python programming languae">
+	<bean class="com.springcore.ci.Certi" name="cer" c:name="Python programming languae" >
 	</bean>
 
 	<bean class="com.springcore.ci.Person" name="person">

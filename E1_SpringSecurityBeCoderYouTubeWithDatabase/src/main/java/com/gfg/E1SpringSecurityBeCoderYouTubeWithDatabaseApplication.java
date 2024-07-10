@@ -10,6 +10,7 @@ public class E1SpringSecurityBeCoderYouTubeWithDatabaseApplication
 	public static void main(String[] args) 
 	{
 		SpringApplication.run(E1SpringSecurityBeCoderYouTubeWithDatabaseApplication.class, args);
+		
 		System.out.println("Balaji: "+new BCryptPasswordEncoder().encode("Balaji@123"));
 		System.out.println("Sachin: "+new BCryptPasswordEncoder().encode("Sachin@123"));
 	}

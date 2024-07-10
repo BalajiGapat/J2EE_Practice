@@ -1,5 +1,7 @@
 package com.springcore.auto.wire.annotation;
 
+
+
 public class Address {
 	private String street;
 	private String city;

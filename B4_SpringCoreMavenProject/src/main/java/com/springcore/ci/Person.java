@@ -6,6 +6,7 @@ public class Person
 {
 	private String name;
 	private int personId;
+	
 	private Certi certi;
 
 	public Person(String name, int personId,Certi certi) 

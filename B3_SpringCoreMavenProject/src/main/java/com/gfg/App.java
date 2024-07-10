@@ -17,7 +17,6 @@ public class App
        System.out.println(std2+" HashCode: "+std2.hashCode());
       
        System.out.println();
-       
        Student std3=context.getBean("student2", Student.class);
        Student std4= (Student) context.getBean("student2");
        System.out.println(std3+" HashCOde: "+std3.hashCode());

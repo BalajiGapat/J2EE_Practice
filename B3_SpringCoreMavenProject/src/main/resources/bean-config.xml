@@ -9,11 +9,11 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<!--instruction to Spring container-->
 	<!-- this is our beans -->
-	<bean class="com.gfg.Student" name="student1"  p:studentId="101" p:studentName="Balaji" p:studentAddress="Dharashiv" scope="singleton" />
+	<bean class="com.gfg.Student" id="s1" name="student1"  p:studentId="101" p:studentName="Balaji" p:studentAddress="Dharashiv" scope="singleton" />
 
 	<!-- second bean  -->
-	<bean class="com.gfg.Student" name="student2"  p:studentId="202" p:studentName="Akash" p:studentAddress="Mumbai"  scope="prototype"/>
+	<bean class="com.gfg.Student" id="s2" name="student2"  p:studentId="202" p:studentName="Akash" p:studentAddress="Mumbai"  scope="prototype"/>
 
-	
 </beans>
