@@ -18,8 +18,6 @@ public class DriverClass
 		Student stud1= ctx.getBean("student1", Student.class);
 		Student stud2= ctx.getBean("student1", Student.class);
 		System.out.println("stud1 hashCode: "+stud1.hashCode());
-		System.out.println("stud2 hashCode: "+stud2.hashCode());
-		
-		
+		System.out.println("stud2 hashCode: "+stud2.hashCode());	
 	}
 }

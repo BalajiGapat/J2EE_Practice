@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/movies")
 public class MovieController
 {
-	@GetMapping("/all-movies") // http://localhost:8080/api/movies/all-movies
+	@GetMapping(value="/all-movies") // http://localhost:8080/api/movies/all-movies
 	public ResponseEntity<?> getMovies()
 	{
 		return new ResponseEntity<String>("this is move controller...!!!", HttpStatus.OK);
