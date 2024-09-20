@@ -14,7 +14,7 @@ import com.gfg.model.MyUser;
 import com.gfg.repository.MyUserRepository;
 
 @SpringBootApplication
-public class E2SpringSecurityShristiTechAcadamyWithDatabaseApplication implements CommandLineRunner
+public class E2SpringSecurityShristiTechAcadamyWithDatabaseApplication //implements CommandLineRunner
 {
 	@Autowired
 	private MyUserRepository myUserRepository;
@@ -32,31 +32,31 @@ public class E2SpringSecurityShristiTechAcadamyWithDatabaseApplication implement
 		System.out.println("in main method at end...!!!");
 	}
 
-	@Override
-	public void run(String... args) throws Exception 
-	{
-		System.out.println("in run method...!!!");
-		MyUser admin=new MyUser();
-		MyUser user=new MyUser();
-		
-		Set<String> adminRoles=new HashSet<>();
-		adminRoles.add("ADMIN");
-		adminRoles.add("NORMAL");
-		
-		Set<String> userRoles=new HashSet<>();
-		userRoles.add("NORMAL");
-		
-		admin.setUsername("balaji");
-		admin.setPassword(passwordEncoder().encode("Balaji@123"));
-		admin.setAuthorities(adminRoles);
-		
-		
-		user.setUsername("sachin");
-		user.setPassword(passwordEncoder().encode("Sachin@123"));
-		user.setAuthorities(userRoles);
-		
-		myUserRepository.save(admin);
-		myUserRepository.save(user);	
-	}
+//	@Override
+//	public void run(String... args) throws Exception 
+//	{
+//		System.out.println("in run method...!!!");
+//		MyUser admin=new MyUser();
+//		MyUser user=new MyUser();
+//		
+//		Set<String> adminRoles=new HashSet<>();
+//		adminRoles.add("ADMIN");
+//		adminRoles.add("NORMAL");
+//		
+//		Set<String> userRoles=new HashSet<>();
+//		userRoles.add("NORMAL");
+//		
+//		admin.setUsername("balaji");
+//		admin.setPassword(passwordEncoder().encode("Balaji@123"));
+//		admin.setAuthorities(adminRoles);
+//		
+//		
+//		user.setUsername("sachin");
+//		user.setPassword(passwordEncoder().encode("Sachin@123"));
+//		user.setAuthorities(userRoles);
+//		
+//		myUserRepository.save(admin);
+//		myUserRepository.save(user);	
+//	}
 
 }

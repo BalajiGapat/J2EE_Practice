@@ -40,7 +40,7 @@ public class UserController
 	}
 	
 	@GetMapping("/user/secure") // http://localhost:8080/api/user/secure
-	@PreAuthorize("hasAnyRole('ADMIN', 'NORMAL')")
+	@PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_NORMAL')")
 	public String secure()
 	{
 		return "this is secure api...!!!";

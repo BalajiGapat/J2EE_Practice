@@ -55,10 +55,11 @@ public class MySecurityConfig
 		return daoAuthenticationProvider;
 	}
 	
-	
-	
-	
-	
+	@Bean
+    BCryptPasswordEncoder passwordEncoder()
+    {
+        return new BCryptPasswordEncoder();
+    }
 	
 	
 	
@@ -78,11 +79,5 @@ public class MySecurityConfig
 //                .build();
 //        return new InMemoryUserDetailsManager(user, admin);
 //    }
-
-    @Bean
-    BCryptPasswordEncoder passwordEncoder()
-    {
-        return new BCryptPasswordEncoder();
-    }
     
 }

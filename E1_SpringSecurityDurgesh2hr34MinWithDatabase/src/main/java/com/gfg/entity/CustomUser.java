@@ -18,7 +18,19 @@ public class CustomUser implements UserDetails
 		super();
 		this.myUser = myUser;
 	}
+	
+	@Override
+	public String getUsername() 
+	{
+		return this.myUser.getUsername(); 
+	}
 
+	@Override
+	public String getPassword() 
+	{
+		return this.myUser.getPassword();
+	}
+	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() 
 	{
@@ -27,17 +39,4 @@ public class CustomUser implements UserDetails
 		
 		return authorities;
 	}
-
-	@Override
-	public String getPassword() 
-	{
-		return this.myUser.getPassword();
-	}
-
-	@Override
-	public String getUsername() 
-	{
-		return this.myUser.getUsername(); 
-	}
-
 }

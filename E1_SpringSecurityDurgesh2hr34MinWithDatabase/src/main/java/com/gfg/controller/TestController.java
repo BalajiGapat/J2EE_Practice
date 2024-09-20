@@ -13,7 +13,7 @@ public class TestController
 	@GetMapping("/home") // http://localhost:8080/test/home 
     String getHome()
 	{
-        return "You are in the test-home page";
+        return "You are in the test-home page => public...";
     }
 
 	
@@ -21,7 +21,7 @@ public class TestController
     @PreAuthorize("hasAnyRole('ADMIN','NORMAL')")
     String getSecure()
     {
-        return "You are in the test-secure page";
+        return "You are in the test-secure page => admin and user can access...";
     }
 
     
@@ -29,7 +29,7 @@ public class TestController
     @PreAuthorize("hasAnyRole('ADMIN')")
     String getSecret()
     {
-        return "You are in the test-secret page";
+        return "You are in the test-secret page => only admin can access...";
     }
     
 }

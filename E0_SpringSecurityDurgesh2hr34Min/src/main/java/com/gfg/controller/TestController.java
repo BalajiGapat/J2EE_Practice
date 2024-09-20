@@ -1,5 +1,6 @@
 package com.gfg.controller;
 
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,7 @@ public class TestController
 	
     @GetMapping("/secure") // http://localhost:8080/test/secure
     @PreAuthorize("hasAnyRole('ADMIN','USER')")
+    //@Secured({"ADMIN", "USER"})
     String getSecure()
     {
         return "You are in the test-secure page";

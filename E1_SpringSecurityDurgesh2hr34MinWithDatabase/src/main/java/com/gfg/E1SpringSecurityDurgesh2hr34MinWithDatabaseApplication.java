@@ -33,13 +33,13 @@ public class E1SpringSecurityDurgesh2hr34MinWithDatabaseApplication implements C
 		user1.setUsername("balaji");
 		user1.setEmail("balaji@gmail.com");
 		user1.setPassword(this.bCryptPasswordEncoder.encode("Balaji@123"));
-		user1.setRole("ROLE_ADMIN");
+		user1.setRole("ADMIN");
 		
 		MyUser user2=new MyUser();
 		user2.setUsername("sachin");
 		user2.setEmail("sachin@gmail.com");
 		user2.setPassword(this.bCryptPasswordEncoder.encode("Sachin@123"));
-		user2.setRole("ROLE_NORMAL");
+		user2.setRole("NORMAL");
 		
 		this.userRepository.save(user1);
 		this.userRepository.save(user2);
